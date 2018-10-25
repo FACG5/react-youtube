@@ -16,7 +16,7 @@ onChangeInput = (input) => {
 render(){
     return (
         <div className="search">
-            <input placeHolder="React courses" onChange={
+            <input placeHolder="Youtube Kids" onChange={
                 e => this.onChangeInput(e.target.value)
             } type="text" id ="searsh-input"/>
         </div>

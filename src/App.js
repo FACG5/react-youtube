@@ -6,7 +6,7 @@ import Result from './components/result';
 
 import './App.css';
 
-const cred = 'AIzaSyBtH3Ts8HaxlT3MXZITfS0iMCfTLbPxXwA';
+const API_KEY = 'AIzaSyBtH3Ts8HaxlT3MXZITfS0iMCfTLbPxXwA';
 
 class App extends Component {
   state = {
@@ -14,9 +14,9 @@ class App extends Component {
     isLoading: true,
     selected: null
     }
- onSearch = ( term= 'reactjs') => {
+ onSearch = ( term= 'kids songs') => {
   this.setState({ isLoading: true });
-  ytSearch({key: cred, term}, data =>{
+  ytSearch({key: API_KEY, term}, data =>{
   this.setState({ isLoading: false , data,  selected: data[0]})
   console.log(this.state.selected);
     })
